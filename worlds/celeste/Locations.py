@@ -108,5 +108,44 @@ locGoldenRidge_table = {
     'Cliff Face 5/5': 2727191
 }
 
+loc_mirror_temple_table = {
+    'Start 1/12': 2727192,
+    'Start 2/12': 2727193,
+    'Start 3/12': 2727194,
+    'Start 4/12': 2727195,
+    'Start 5/12': 2727196,
+    'Start 6/12': 2727197,
+    'Start 7/12': 2727198,
+    'Start 8/12': 2727199,
+    'Start 9/12': 2727200,
+    'Start 10/12': 2727201,
+    'Start 11/12': 2727202,
+    'Start 12/12': 2727203,
+    'Depths 1/11': 2727204,
+    'Depths 2/11': 2727205,
+    'Depths 3/11': 2727206,
+    'Depths 4/11': 2727207,
+    'Depths 5/11': 2727208,
+    'Depths 6/11': 2727209,
+    'Depths 7/11': 2727210,
+    'Depths 8/11': 2727211,
+    'Depths 9/11': 2727212,
+    'Depths 10/11': 2727213,
+    'Depths 11/11': 2727214,
+    'Unravelling': 2727215,
+    'Search 1/6': 2727216,
+    'Search 2/6': 2727217,
+    'Search 3/6': 2727218,
+    'Search 4/6': 2727219,
+    'Search 5/6': 2727220,
+    'Search 6/6': 2727221,
+    'Rescue': 2727222
+}
 
-location_table = {**locForsakenCity_table, **locOldSite_table, **locCelestialResort_table, **locGoldenRidge_table}
+location_table = {
+    **locForsakenCity_table,
+    **locOldSite_table,
+    **locCelestialResort_table,
+    **locGoldenRidge_table,
+    **loc_mirror_temple_table
+}

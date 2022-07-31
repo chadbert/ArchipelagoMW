@@ -68,6 +68,8 @@ class CelesteWorld(World):
         if last_level > 3:
             self.world.itempool +=[self.create_item("Strawberry") for i in range(0,29)]
 
+        if last_level > 4:
+            self.world.itempool +=[self.create_item("Strawberry") for i in range(0,31)]
 
     def fill_slot_data(self):
         return {

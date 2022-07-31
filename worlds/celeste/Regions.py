@@ -1,7 +1,7 @@
 import typing
 from BaseClasses import MultiWorld, Region, Entrance, RegionType
 from .Locations import CelesteLocation, locForsakenCity_table, locOldSite_table, locCelestialResort_table, \
-    locGoldenRidge_table
+    locGoldenRidge_table, loc_mirror_temple_table
 
 celesteLevels = ["Forsaken City"]
 
@@ -64,6 +64,20 @@ def create_regions(world: MultiWorld, player: int):
         endRegion.exits.append(celestial_resort_to_golden_ridge)
 
         endRegion = regGoldenRidge
+
+    if last_level > 4:
+        reg_mirror_temple = Region("Mirror Temple", RegionType.Generic, "Mirror Temple", player, world)
+        loc_mirror_temple_names = [name for name, id in loc_mirror_temple_table.items()]
+        reg_mirror_temple.locations += [
+            CelesteLocation(player, loc_name, loc_mirror_temple_table[loc_name], reg_mirror_temple) for loc_name in
+            loc_mirror_temple_names]
+        world.regions.append(reg_mirror_temple)
+
+        golden_ridge_to_mirror_temple = Entrance(player, 'Mirror Temple', endRegion)
+        golden_ridge_to_mirror_temple.connect(reg_mirror_temple)
+        endRegion.exits.append(golden_ridge_to_mirror_temple)
+
+        endRegion = reg_mirror_temple
 
 #def connect_regions(world: MultiWorld, player: int, source: str, target: str, rule=None):
 #    sourceRegion = world.get_region(source, player)
