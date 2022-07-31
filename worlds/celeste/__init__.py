@@ -62,16 +62,20 @@ class CelesteWorld(World):
         if last_level > 1:
             self.world.itempool +=[self.create_item("Strawberry") for i in range(0, 19)]
 
+        if last_level > 2:
+            self.world.itempool +=[self.create_item("Strawberry") for i in range(0,25)]
 
+        if last_level > 3:
+            self.world.itempool +=[self.create_item("Strawberry") for i in range(0,29)]
 
 
     def fill_slot_data(self):
         return {
             #"DoorCost": self.world.DoorCost[self.player].value,
             #"AreaCostRando": self.area_cost_map,
-            "DeathLink": self.world.death_link[self.player].value,
-            "DeathLink_Amnesty": self.world.DeathLinkAmnesty[self.player].value,
-            "LastLevel": self.world.last_level[self.player].value
+            "death_link": self.world.death_link[self.player].value,
+            "death_link_amnesty": self.world.death_link_amnesty[self.player].value,
+            "last_level": self.world.last_level[self.player].value
         }
 
     def generate_output(self, output_directory: str):

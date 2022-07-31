@@ -3,10 +3,10 @@ from Options import Option, DefaultOnToggle, Range, Toggle, DeathLink
 
 
 class DeathLinkAmnesty(Range):
-    """Amount of Deaths to take before sending a DeathLink signal, for balancing difficulty"""
+    """Amount of deaths to take before sending a DeathLink signal, for balancing difficulty"""
     range_start = 0
-    range_end = 30
-    default = 15
+    range_end = 50
+    default = 20
 
 class LevelSelection(Range):
     """The number of levels to beat to finish the game"""
@@ -16,6 +16,6 @@ class LevelSelection(Range):
 
 celeste_options: typing.Dict[str,type(Option)] = {
     "death_link": DeathLink,
-    "DeathLinkAmnesty": DeathLinkAmnesty,
+    "death_link_amnesty": DeathLinkAmnesty,
     "last_level": LevelSelection
 }
