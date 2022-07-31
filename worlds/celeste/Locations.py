@@ -142,10 +142,61 @@ loc_mirror_temple_table = {
     'Rescue': 2727222
 }
 
+loc_summit_table = {
+    'Summit Start 1/4': 2727223,
+    'Summit Start 2/4': 2727224,
+    'Summit Start 3/4': 2727225,
+    'Summit Start 4/4': 2727226,
+    'Summit 500M 1/6': 2727227,
+    'Summit 500M 2/6': 2727228,
+    'Summit 500M 3/6': 2727229,
+    'Summit 500M 4/6': 2727230,
+    'Summit 500M 5/6': 2727231,
+    'Summit 500M 6/6': 2727232,
+    'Summit 1000M 1/6': 2727233,
+    'Summit 1000M 2/6': 2727234,
+    'Summit 1000M 3/6': 2727235,
+    'Summit 1000M 4/6': 2727236,
+    'Summit 1000M 5/6': 2727237,
+    'Summit 1000M 6/6': 2727238,
+    'Summit 1500M 1/8': 2727239,
+    'Summit 1500M 2/8': 2727240,
+    'Summit 1500M 3/8': 2727241,
+    'Summit 1500M 4/8': 2727242,
+    'Summit 1500M 5/8': 2727243,
+    'Summit 1500M 6/8': 2727244,
+    'Summit 1500M 7/8': 2727245,
+    'Summit 1500M 8/8': 2727246,
+    'Summit 2000M 1/8': 2727247,
+    'Summit 2000M 2/8': 2727248,
+    'Summit 2000M 3/8': 2727249,
+    'Summit 2000M 4/8': 2727250,
+    'Summit 2000M 5/8': 2727251,
+    'Summit 2000M 6/8': 2727252,
+    'Summit 2000M 7/8': 2727253,
+    'Summit 2000M 8/8': 2727254,
+    'Summit 2500M 1/8': 2727255,
+    'Summit 2500M 2/8': 2727256,
+    'Summit 2500M 3/8': 2727257,
+    'Summit 2500M 4/8': 2727258,
+    'Summit 2500M 5/8': 2727259,
+    'Summit 2500M 6/8': 2727260,
+    'Summit 2500M 7/8': 2727261,
+    'Summit 2500M 8/8': 2727262,
+    'Summit 3000M 1/7': 2727263,
+    'Summit 3000M 2/7': 2727264,
+    'Summit 000M 3/7': 2727265,
+    'Summit 3000M 4/7': 2727266,
+    'Summit 3000M 5/7': 2727267,
+    'Summit 3000M 6/7': 2727268,
+    'Summit 3000M 7/7': 2727269
+}
+
 location_table = {
     **locForsakenCity_table,
     **locOldSite_table,
     **locCelestialResort_table,
     **locGoldenRidge_table,
-    **loc_mirror_temple_table
+    **loc_mirror_temple_table,
+    **loc_summit_table
 }
