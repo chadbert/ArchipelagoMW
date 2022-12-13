@@ -1,7 +1,7 @@
 import typing
 from BaseClasses import MultiWorld, Region, Entrance, RegionType
-from .Locations import CelesteLocation, locForsakenCity_table, locOldSite_table, locCelestialResort_table, \
-    locGoldenRidge_table, loc_mirror_temple_table, loc_summit_table
+from .Locations import CelesteLocation, loc_forsaken_city_table, loc_old_site_table, loc_celestial_resort_table, \
+    loc_golden_ridge_table, loc_mirror_temple_table, loc_summit_table
 
 celesteLevels = ["Forsaken City"]
 
@@ -12,8 +12,8 @@ def create_regions(world: MultiWorld, player: int):
     menu = Region("Menu", RegionType.Generic, "menu", player, world)
 
     regForsakenCity = Region("Forsaken City", RegionType.Generic, "Forsaken City", player, world)
-    locForsakenCity_names = [name for name, id in locForsakenCity_table.items()]
-    regForsakenCity.locations += [CelesteLocation(player, loc_name, locForsakenCity_table[loc_name], regForsakenCity) for loc_name in locForsakenCity_names]
+    locForsakenCity_names = [name for name, id in loc_forsaken_city_table.items()]
+    regForsakenCity.locations += [CelesteLocation(player, loc_name, loc_forsaken_city_table[loc_name], regForsakenCity) for loc_name in locForsakenCity_names]
     world.regions.append(menu)
     world.regions.append(regForsakenCity)
 
@@ -25,10 +25,10 @@ def create_regions(world: MultiWorld, player: int):
 
     if last_level > 1:
         regOldSite = Region("Old Site", RegionType.Generic, "Old Site", player, world)
-        locOldSite_names = [name for name, id in locOldSite_table.items()]
+        locOldSite_names = [name for name, id in loc_old_site_table.items()]
         regOldSite.locations += [
-            CelesteLocation(player, loc_name, locOldSite_table[loc_name], regOldSite) for loc_name in
-            locOldSite_names]
+            CelesteLocation(player, loc_name, loc_old_site_table[loc_name], regOldSite) for loc_name in locOldSite_names
+        ]
         world.regions.append(regOldSite)
 
         forsaken_city_to_old_site = Entrance(player, 'Old Site', endRegion)
@@ -39,9 +39,9 @@ def create_regions(world: MultiWorld, player: int):
 
     if last_level > 2:
         regCelestialResort = Region("Celestial Resort", RegionType.Generic, "Celestial Resort", player, world)
-        locCelestialResort_names = [name for name, id in locCelestialResort_table.items()]
+        locCelestialResort_names = [name for name, id in loc_celestial_resort_table.items()]
         regCelestialResort.locations += [
-            CelesteLocation(player, loc_name, locCelestialResort_table[loc_name], regOldSite) for loc_name in
+            CelesteLocation(player, loc_name, loc_celestial_resort_table[loc_name], regOldSite) for loc_name in
             locCelestialResort_names]
         world.regions.append(regCelestialResort)
 
@@ -53,9 +53,9 @@ def create_regions(world: MultiWorld, player: int):
 
     if last_level > 3:
         regGoldenRidge = Region("Golden Ridge", RegionType.Generic, "Golden Ridge", player, world)
-        locGoldenRidge_names = [name for name, id in locGoldenRidge_table.items()]
+        locGoldenRidge_names = [name for name, id in loc_golden_ridge_table.items()]
         regGoldenRidge.locations += [
-            CelesteLocation(player, loc_name, locGoldenRidge_table[loc_name], regGoldenRidge) for loc_name in
+            CelesteLocation(player, loc_name, loc_golden_ridge_table[loc_name], regGoldenRidge) for loc_name in
             locGoldenRidge_names]
         world.regions.append(regGoldenRidge)
 
